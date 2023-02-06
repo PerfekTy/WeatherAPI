@@ -1,0 +1,63 @@
+body {
+  background: #0000003a;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+
+.container {
+  max-width: 400px;
+}
+
+.card {
+  background: #f8f9fa;
+  max-width: 400px;
+}
+
+.icon img {
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+}
+
+.rainbow {
+  background-size: 200%;
+  padding: 4px;
+  border-radius: 10px;
+  animation: gradient 3s infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background: #ff0000;
+  }
+
+  20% {
+    background: #ffae00;
+  }
+
+  40% {
+    background: #aecd32;
+  }
+
+  60% {
+    background: #008060;
+  }
+
+  80% {
+    background: #b1ade6;
+  }
+
+  100% {
+    background: #cc00ff;
+  }
+
+  120% {
+    background: #ff0077;
+  }
+
+  140% {
+    background: #ff0000;
+  }
+}
