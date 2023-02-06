@@ -1,5 +1,6 @@
 const form = document.querySelector("form"),
   card = document.querySelector(".card"),
+  rainbow = document.querySelector(".rainbow"),
   details = document.querySelector(".details"),
   time = document.querySelector("img.time"),
   icon = document.querySelector(".icon img");
@@ -24,7 +25,11 @@ const updateUI = data => {
   icon.setAttribute("src", iconSrc);
 
   // remove d-none class
-  if (card.classList.contains("d-none")) {
+  if (
+    rainbow.classList.contains("d-none") &&
+    card.classList.contains("d-none")
+  ) {
+    rainbow.classList.remove("d-none");
     card.classList.remove("d-none");
   }
 };
