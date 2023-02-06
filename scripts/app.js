@@ -3,7 +3,8 @@ const form = document.querySelector("form"),
   rainbow = document.querySelector(".rainbow"),
   details = document.querySelector(".details"),
   time = document.querySelector("img.time"),
-  icon = document.querySelector(".icon img");
+  icon = document.querySelector(".icon img"),
+  btn = document.querySelector(".button");
 
 const updateUI = data => {
   const city = data.cityDetails,
@@ -42,6 +43,19 @@ const updateCity = async city => {
 };
 
 form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  // get city value
+  const city = form.city.value.trim();
+  form.reset();
+
+  // update ui with the city
+  updateCity(city)
+    .then(data => updateUI(data))
+    .catch(err => console.log(err));
+});
+
+btn.addEventListener("click", e => {
   e.preventDefault();
 
   // get city value
